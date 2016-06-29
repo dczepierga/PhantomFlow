@@ -355,6 +355,8 @@ module.exports.init = function ( options ) {
 							log('\n' + line.green );
 						} else if ( /DEBUG/.test( line ) ) {
 							log( ( '\n' + line.replace( /DEBUG/, '' ) + '\n' ).yellow );
+						} else if ( /INFO/.test( line ) ) {
+                                                        log( ( '\n' + line.replace( /INFO/, '' ) + '\n' ).white );
 						} else if ( child.hasErrored ) {
 
 							errorLog('\n  '+line.bold.red);
